@@ -167,6 +167,19 @@ class SchemaRegistryClient {
         const response = await this.fetchWithRetry(url, options);
         return response.json();
     }
+    async setMode(mode) {
+        const url = `${this.host}/mode`;
+        const options = {
+            method: 'PUT',
+            headers: this.getHeaders(),
+            body: JSON.stringify({ mode }),
+        };
+        const response = await this.fetchWithRetry(url, options);
+        if (!response.ok) {
+            const errorBody = await response.text();
+            throw new Error(`Failed to set mode: ${errorBody}`);
+        }
+    }
     // Server Information
     async getServerInfo() {
         const url = `${this.host}/`;

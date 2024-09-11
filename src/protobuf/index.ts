@@ -1,4 +1,4 @@
-import * as protobuf from 'protobufjs';
+import { Root } from 'protobufjs';
 import SchemaRegistryClient from '../client';
 import { decode, encode } from '../wire';
 
@@ -12,7 +12,7 @@ export class ProtoHelper {
   public async encodeMessage(subject: string, payload: object): Promise<Buffer> {
     const res = await this.schemaRegistryClient.getSchemaByVersion(subject);
     const schema = JSON.parse(res.schema);
-    const root = protobuf.Root.fromJSON(schema) // Convert the schema to a Protobuf root
+    const root = Root.fromJSON(schema) // Convert the schema to a Protobuf root
     const messageType = root.lookupType(schema.name); // Get the message type
     const errMsg = messageType.verify(payload); // Verify the payload
     if (errMsg) throw Error(errMsg);
@@ -25,9 +25,9 @@ export class ProtoHelper {
 
   public async decodeMessage(buffer: Buffer): Promise<any> {
     const { registryId, payload } = decode(buffer); // Wire decode
-    const schema = await this.schemaRegistryClient.getSchemaById(registryId);
-    const root = protobuf.Root.fromJSON(schema.schema); // Convert the schema to a Protobuf root
-    const messageType = root.lookupType(schema.name); // Get the message type
+    const res = await this.schemaRegistryClient.getSchemaById(registryId);
+    const root = Root.fromJSON(JSON.parse(res.schema)); // Convert the schema to a Protobuf root
+    const messageType = root.lookupType(res.subject); // Get the message type
 
     return messageType.decode(payload); // Decode the payload
   }

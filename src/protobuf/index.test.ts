@@ -1,3 +1,4 @@
+import { Root } from 'protobufjs';
 import ProtoHelper from '.';
 import SchemaRegistryClient from '../client';
 
@@ -41,7 +42,7 @@ describe('ProtoHelper', () => {
     };
     const payload = { field1: 'test' };
 
-    const root = protobuf.Root.fromJSON(schema.schema);
+    const root = Root.fromJSON(schema.schema);
     const messageType = root.lookupType(schema.name);
     const buffer = messageType.encode(messageType.create(payload)).finish();
 
@@ -51,9 +52,7 @@ describe('ProtoHelper', () => {
     });
 
     const protoHelper = new ProtoHelper(client);
-    const decodedMessage = await protoHelper.decodeMessage(buffer);
+    const decodedMessage = await protoHelper.decodeMessage(Buffer.from(buffer));
     expect(decodedMessage).toEqual(payload);
   });
-
-  // Additional tests for error handling...
 });

@@ -15,7 +15,6 @@ describe('SchemaRegistryClient', () => {
     });
     afterEach(() => {
         jest.clearAllMocks();
-        i;
     });
     // Schemas
     describe('Schemas', () => {
@@ -30,7 +29,7 @@ describe('SchemaRegistryClient', () => {
             expect(global.fetch).toHaveBeenCalledWith('https://schema-registry-url/subjects/my-subject/versions', expect.objectContaining({
                 method: 'POST',
                 headers: expect.any(Object),
-                body: JSON.stringify({ type: 'record', name: 'MyRecord', fields: [] }),
+                body: JSON.stringify({ schema: JSON.stringify({ type: 'record', name: 'MyRecord', fields: [] }) }),
             }));
         });
         it('should handle network error when registering a schema (Sad Path)', async () => {
@@ -42,8 +41,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 500,
                 statusText: 'Internal Server Error',
+                text: jest.fn().mockResolvedValue('Error body'),
             });
-            await expect(client.registerSchema('my-subject', { type: 'record', name: 'MyRecord', fields: [] })).rejects.toThrow('HTTP error: 500 Internal Server Error');
+            await expect(client.registerSchema('my-subject', { type: 'record', name: 'MyRecord', fields: [] })).rejects.toThrow('HTTP error: 500 Internal Server Error. Body: Error body');
         });
         it('should fetch a schema by ID (Happy Path)', async () => {
             const mockResponse = { id: 1, schema: '{}' };
@@ -67,8 +67,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 404,
                 statusText: 'Not Found',
+                text: jest.fn().mockResolvedValue('Not found'),
             });
-            await expect(client.getSchemaById(1)).rejects.toThrow('HTTP error: 404 Not Found');
+            await expect(client.getSchemaById(1)).rejects.toThrow('HTTP error: 404 Not Found. Body: Not found');
         });
         it('should fetch a schema by version (Happy Path)', async () => {
             const mockResponse = { id: 1, schema: '{}' };
@@ -92,8 +93,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 500,
                 statusText: 'Internal Server Error',
+                text: jest.fn().mockResolvedValue('Internal server error'),
             });
-            await expect(client.getSchemaByVersion('my-subject', 'latest')).rejects.toThrow('HTTP error: 500 Internal Server Error');
+            await expect(client.getSchemaByVersion('my-subject', 'latest')).rejects.toThrow('HTTP error: 500 Internal Server Error. Body: Internal server error');
         });
     });
     // Subjects
@@ -120,17 +122,16 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 403,
                 statusText: 'Forbidden',
+                text: jest.fn().mockResolvedValue('Forbidden'),
             });
-            await expect(client.getAllSubjects()).rejects.toThrow('HTTP error: 403 Forbidden');
+            await expect(client.getAllSubjects()).rejects.toThrow('HTTP error: 403 Forbidden. Body: Forbidden');
         });
         it('should delete a subject (Happy Path)', async () => {
-            const mockResponse = [1, 2, 3];
             global.fetch.mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue(mockResponse),
             });
             const response = await client.deleteSubject('my-subject');
-            expect(response).toEqual(mockResponse);
+            expect(response).toBeUndefined();
             expect(global.fetch).toHaveBeenCalledWith('https://schema-registry-url/subjects/my-subject', expect.objectContaining({
                 method: 'DELETE',
                 headers: expect.any(Object),
@@ -145,8 +146,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 404,
                 statusText: 'Not Found',
+                text: jest.fn().mockResolvedValue('Subject not found'),
             });
-            await expect(client.deleteSubject('my-subject')).rejects.toThrow('HTTP error: 404 Not Found');
+            await expect(client.deleteSubject('my-subject')).rejects.toThrow('HTTP error: 404 Not Found. Body: Subject not found');
         });
     });
     // Compatibility
@@ -175,9 +177,10 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 400,
                 statusText: 'Bad Request',
+                text: jest.fn().mockResolvedValue('Bad request'),
             });
             await expect(client.checkCompatibility('my-subject', 'latest', { type: 'record', name: 'MyRecord', fields: [] }))
-                .rejects.toThrow('HTTP error: 400 Bad Request');
+                .rejects.toThrow('HTTP error: 400 Bad Request. Body: Bad request');
         });
         it('should get global compatibility level (Happy Path)', async () => {
             const mockResponse = { compatibilityLevel: 'FULL' };
@@ -201,17 +204,16 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 403,
                 statusText: 'Forbidden',
+                text: jest.fn().mockResolvedValue('Forbidden'),
             });
-            await expect(client.getGlobalCompatibility()).rejects.toThrow('HTTP error: 403 Forbidden');
+            await expect(client.getGlobalCompatibility()).rejects.toThrow('HTTP error: 403 Forbidden. Body: Forbidden');
         });
         it('should set global compatibility level (Happy Path)', async () => {
-            const mockResponse = { compatibility: 'FULL' };
             global.fetch.mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue(mockResponse),
             });
             const compatibility = await client.setGlobalCompatibility('FULL');
-            expect(compatibility).toEqual(mockResponse);
+            expect(compatibility).toBeUndefined();
             expect(global.fetch).toHaveBeenCalledWith('https://schema-registry-url/config', expect.objectContaining({
                 method: 'PUT',
                 headers: expect.any(Object),
@@ -227,8 +229,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 500,
                 statusText: 'Internal Server Error',
+                text: jest.fn().mockResolvedValue('Server error'),
             });
-            await expect(client.setGlobalCompatibility('FULL')).rejects.toThrow('HTTP error: 500 Internal Server Error');
+            await expect(client.setGlobalCompatibility('FULL')).rejects.toThrow('HTTP error: 500 Internal Server Error. Body: Server error');
         });
     });
     // Modes
@@ -255,17 +258,16 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 403,
                 statusText: 'Forbidden',
+                text: jest.fn().mockResolvedValue('Forbidden'),
             });
-            await expect(client.getMode()).rejects.toThrow('HTTP error: 403 Forbidden');
+            await expect(client.getMode()).rejects.toThrow('HTTP error: 403 Forbidden. Body: Forbidden');
         });
         it('should set mode (Happy Path)', async () => {
-            const mockResponse = { mode: 'READWRITE' };
             global.fetch.mockResolvedValue({
                 ok: true,
-                json: jest.fn().mockResolvedValue(mockResponse),
             });
             const mode = await client.setMode('READWRITE');
-            expect(mode).toEqual(mockResponse);
+            expect(mode).toBeUndefined();
             expect(global.fetch).toHaveBeenCalledWith('https://schema-registry-url/mode', expect.objectContaining({
                 method: 'PUT',
                 headers: expect.any(Object),
@@ -281,8 +283,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 500,
                 statusText: 'Internal Server Error',
+                text: jest.fn().mockResolvedValue('Server error'),
             });
-            await expect(client.setMode('READWRITE')).rejects.toThrow('HTTP error: 500 Internal Server Error');
+            await expect(client.setMode('READWRITE')).rejects.toThrow('HTTP error: 500 Internal Server Error. Body: Server error');
         });
     });
     // Server Information
@@ -309,8 +312,9 @@ describe('SchemaRegistryClient', () => {
                 ok: false,
                 status: 404,
                 statusText: 'Not Found',
+                text: jest.fn().mockResolvedValue('Not found'),
             });
-            await expect(client.getServerInfo()).rejects.toThrow('HTTP error: 404 Not Found');
+            await expect(client.getServerInfo()).rejects.toThrow('HTTP error: 404 Not Found. Body: Not found');
         });
     });
 });

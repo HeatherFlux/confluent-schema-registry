@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const protobufjs_1 = require("protobufjs");
 const _1 = __importDefault(require("."));
 const client_1 = __importDefault(require("../client"));
 describe('ProtoHelper', () => {
@@ -38,7 +39,7 @@ describe('ProtoHelper', () => {
             name: 'TestMessage',
         };
         const payload = { field1: 'test' };
-        const root = protobuf.Root.fromJSON(schema.schema);
+        const root = protobufjs_1.Root.fromJSON(schema.schema);
         const messageType = root.lookupType(schema.name);
         const buffer = messageType.encode(messageType.create(payload)).finish();
         global.fetch.mockResolvedValue({
@@ -46,8 +47,7 @@ describe('ProtoHelper', () => {
             json: jest.fn().mockResolvedValue(schema),
         });
         const protoHelper = new _1.default(client);
-        const decodedMessage = await protoHelper.decodeMessage(buffer);
+        const decodedMessage = await protoHelper.decodeMessage(Buffer.from(buffer));
         expect(decodedMessage).toEqual(payload);
     });
-    // Additional tests for error handling...
 });
