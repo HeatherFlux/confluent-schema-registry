@@ -1,112 +1,112 @@
-import SchemaRegistryClient from './client';
-import AvroHelper from './avro';
-import ProtoHelper from './protobuf';
+import { SchemaRegistryClient } from './client'
+import { AvroHelper } from './avro'
+import { ProtoHelper } from './protobuf'
 
 describe('Integration Tests with Confluent Cloud and Local Services', () => {
   if (!process.env.SCHEMA_REGISTRY_URL) {
-    throw new Error('SCHEMA_REGISTRY_URL is not set');
+    throw new Error('SCHEMA_REGISTRY_URL is not set')
   }
   const client = new SchemaRegistryClient({
     host: process.env.SCHEMA_REGISTRY_URL,
-  });
+  })
 
-  let avroHelper: AvroHelper;
-  let protoHelper: ProtoHelper;
+  let avroHelper: AvroHelper
+  let protoHelper: ProtoHelper
 
   beforeAll(() => {
-    avroHelper = new AvroHelper(client);
-    protoHelper = new ProtoHelper(client);
+    avroHelper = new AvroHelper(client)
+    protoHelper = new ProtoHelper(client)
   })
 
   it('should register and fetch an Avro schema', async () => {
-    const subject = 'test-subject-avro';
+    const subject = 'test-subject-avro'
     const schema = {
       type: 'record',
       name: 'TestRecord',
       fields: [{ name: 'field1', type: 'string' }],
-    };
+    }
 
-    const res = await client.registerSchema(subject, schema);
+    const res = await client.registerSchema(subject, schema)
     console.log(res)
-    expect(res.id).toBeDefined();
+    expect(res.id).toBeDefined()
 
-    const fetchedSchema = await client.getSchemaById(res.id);
-    expect(fetchedSchema.schema).toEqual(JSON.stringify(schema));
+    const fetchedSchema = await client.getSchemaById(res.id)
+    expect(fetchedSchema.schema).toEqual(JSON.stringify(schema))
   })
 
   it('should register and fetch a Protobuf schema', async () => {
-    const subject = 'test-subject-protobuf';
+    const subject = 'test-subject-protobuf'
     const schema = {
       nested: {
         TestMessage: {
           fields: {
             field1: {
-              type: "string",
+              type: 'string',
               id: 1,
             },
           },
         },
       },
-    };
+    }
 
-    const res = await client.registerSchema(subject, schema);
-    expect(res).toBeDefined();
+    const res = await client.registerSchema(subject, schema)
+    expect(res).toBeDefined()
 
-    const fetchedSchema = await client.getSchemaById(res.id);
-    expect(fetchedSchema.schema).toEqual(schema);
+    const fetchedSchema = await client.getSchemaById(res.id)
+    expect(fetchedSchema.schema).toEqual(schema)
   })
 
   // 2. Message Encoding/Decoding Tests
   it('should encode and decode Avro messages', async () => {
-    const subject = 'test-subject-avro';
-    const payload = { field1: 'test' };
+    const subject = 'test-subject-avro'
+    const payload = { field1: 'test' }
 
     await client.registerSchema(subject, {
       type: 'record',
       name: 'TestRecord',
       fields: [{ name: 'field1', type: 'string' }],
-    });
+    })
 
-    const encodedMessage = await avroHelper.encodeMessage(subject, payload);
-    const decodedMessage = await avroHelper.decodeMessage(encodedMessage);
+    const encodedMessage = await avroHelper.encodeMessage(subject, payload)
+    const decodedMessage = await avroHelper.decodeMessage(encodedMessage)
 
-    expect(decodedMessage).toEqual(payload);
+    expect(decodedMessage).toEqual(payload)
   })
 
   it('should encode and decode Protobuf messages', async () => {
-    const subject = 'test-subject-protobuf';
+    const subject = 'test-subject-protobuf'
     const schema = {
       nested: {
         TestMessage: {
           fields: {
             field1: {
-              type: "string",
+              type: 'string',
               id: 1,
             },
           },
         },
       },
-    };
-    const payload = { field1: 'test' };
+    }
+    const payload = { field1: 'test' }
 
-    await client.registerSchema(subject, schema);
+    await client.registerSchema(subject, schema)
 
-    const encodedMessage = await protoHelper.encodeMessage(subject, payload);
-    const decodedMessage = await protoHelper.decodeMessage(encodedMessage);
+    const encodedMessage = await protoHelper.encodeMessage(subject, payload)
+    const decodedMessage = await protoHelper.decodeMessage(encodedMessage)
 
-    expect(decodedMessage).toEqual(payload);
+    expect(decodedMessage).toEqual(payload)
   })
 
   // 3. Schema Compatibility Test
   it('should check schema compatibility', async () => {
-    const subject = 'test-subject-avro';
+    const subject = 'test-subject-avro'
     const schema = {
       type: 'record',
       name: 'TestRecord',
       fields: [{ name: 'field1', type: 'string' }],
-    };
+    }
 
-    await client.registerSchema(subject, schema);
+    await client.registerSchema(subject, schema)
 
     const newSchema = {
       type: 'record',
@@ -115,35 +115,27 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
         { name: 'field1', type: 'string' },
         { name: 'field2', type: 'int' },
       ],
-    };
+    }
 
-    const compatibility = await client.checkCompatibility(
-      subject,
-      '1',
-      newSchema,
-    )
-    expect(compatibility.is_compatible).toBe(true);
+    const compatibility = await client.checkCompatibility(subject, '1', newSchema)
+    expect(compatibility.is_compatible).toBe(true)
   })
 
   // 5. Error Handling Tests
   it('should handle schema not found error', async () => {
-    await expect(client.getSchemaById(99999)).rejects.toThrow(
-      'Schema not found',
-    )
-  });
+    await expect(client.getSchemaById(99999)).rejects.toThrow('Schema not found')
+  })
 
   it('should handle encoding error for invalid payload', async () => {
-    const subject = 'test-subject-avro';
-    const payload = { field2: 'test' }; // field2 does not exist in the schema
+    const subject = 'test-subject-avro'
+    const payload = { field2: 'test' } // field2 does not exist in the schema
 
     await client.registerSchema(subject, {
       type: 'record',
       name: 'TestRecord',
       fields: [{ name: 'field1', type: 'string' }],
-    });
+    })
 
-    await expect(avroHelper.encodeMessage(subject, payload)).rejects.toThrow(
-      'Invalid payload',
-    )
-  });
+    await expect(avroHelper.encodeMessage(subject, payload)).rejects.toThrow('Invalid payload')
+  })
 })

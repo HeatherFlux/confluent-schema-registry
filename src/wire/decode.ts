@@ -4,15 +4,13 @@
  * @returns An object containing the magic byte, schema ID, and payload.
  */
 export function decode(buffer: Buffer): {
-  magicByte: number;
-  registryId: number;
-  payload: Buffer;
+  magicByte: number
+  registryId: number
+  payload: Buffer
 } {
-  const magicByte = buffer.readUInt8(0);
-  const registryId = buffer.readUInt32BE(1);
-  const payload = buffer.subarray(5); // Use subarray instead of slice
+  const magicByte = buffer.readUInt8(0)
+  const registryId = buffer.readUInt32BE(1)
+  const payload = buffer.subarray(5) // Use subarray instead of slice
 
-  return { magicByte, registryId, payload };
+  return { magicByte, registryId, payload }
 }
-
-export default decode;
