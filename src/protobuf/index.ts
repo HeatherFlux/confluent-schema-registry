@@ -2,14 +2,29 @@ import { Root } from 'protobufjs';
 import SchemaRegistryClient from '../client';
 import { decode, encode } from '../wire';
 
+/**
+ *
+ */
 export class ProtoHelper {
   private schemaRegistryClient: SchemaRegistryClient;
 
+  /**
+   *
+   * @param schemaRegistryClient
+   */
   constructor(schemaRegistryClient: SchemaRegistryClient) {
     this.schemaRegistryClient = schemaRegistryClient;
   }
 
-  public async encodeMessage(subject: string, payload: object): Promise<Buffer> {
+  /**
+   *
+   * @param subject
+   * @param payload
+   */
+  public async encodeMessage(
+    subject: string,
+    payload: object,
+  ): Promise<Buffer> {
     const res = await this.schemaRegistryClient.getSchemaByVersion(subject);
     const schema = JSON.parse(res.schema);
     const root = Root.fromJSON(schema) // Convert the schema to a Protobuf root
@@ -23,6 +38,10 @@ export class ProtoHelper {
     return encode(schema.id, Buffer.from(serializedPayload)); // Wire encode
   }
 
+  /**
+   *
+   * @param buffer
+   */
   public async decodeMessage(buffer: Buffer): Promise<any> {
     const { registryId, payload } = decode(buffer); // Wire decode
     const res = await this.schemaRegistryClient.getSchemaById(registryId);

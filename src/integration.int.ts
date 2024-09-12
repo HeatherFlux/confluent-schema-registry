@@ -16,7 +16,7 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
   beforeAll(() => {
     avroHelper = new AvroHelper(client);
     protoHelper = new ProtoHelper(client);
-  });
+  })
 
   it('should register and fetch an Avro schema', async () => {
     const subject = 'test-subject-avro';
@@ -32,21 +32,21 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
 
     const fetchedSchema = await client.getSchemaById(res.id);
     expect(fetchedSchema.schema).toEqual(JSON.stringify(schema));
-  });
+  })
 
   it('should register and fetch a Protobuf schema', async () => {
     const subject = 'test-subject-protobuf';
     const schema = {
-      "nested": {
-        "TestMessage": {
-          "fields": {
-            "field1": {
-              "type": "string",
-              "id": 1
-            }
-          }
-        }
-      }
+      nested: {
+        TestMessage: {
+          fields: {
+            field1: {
+              type: "string",
+              id: 1,
+            },
+          },
+        },
+      },
     };
 
     const res = await client.registerSchema(subject, schema);
@@ -54,7 +54,7 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
 
     const fetchedSchema = await client.getSchemaById(res.id);
     expect(fetchedSchema.schema).toEqual(schema);
-  });
+  })
 
   // 2. Message Encoding/Decoding Tests
   it('should encode and decode Avro messages', async () => {
@@ -71,21 +71,21 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
     const decodedMessage = await avroHelper.decodeMessage(encodedMessage);
 
     expect(decodedMessage).toEqual(payload);
-  });
+  })
 
   it('should encode and decode Protobuf messages', async () => {
     const subject = 'test-subject-protobuf';
     const schema = {
-      "nested": {
-        "TestMessage": {
-          "fields": {
-            "field1": {
-              "type": "string",
-              "id": 1
-            }
-          }
-        }
-      }
+      nested: {
+        TestMessage: {
+          fields: {
+            field1: {
+              type: "string",
+              id: 1,
+            },
+          },
+        },
+      },
     };
     const payload = { field1: 'test' };
 
@@ -95,7 +95,7 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
     const decodedMessage = await protoHelper.decodeMessage(encodedMessage);
 
     expect(decodedMessage).toEqual(payload);
-  });
+  })
 
   // 3. Schema Compatibility Test
   it('should check schema compatibility', async () => {
@@ -111,16 +111,25 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
     const newSchema = {
       type: 'record',
       name: 'TestRecord',
-      fields: [{ name: 'field1', type: 'string' }, { name: 'field2', type: 'int' }],
+      fields: [
+        { name: 'field1', type: 'string' },
+        { name: 'field2', type: 'int' },
+      ],
     };
 
-    const compatibility = await client.checkCompatibility(subject, '1', newSchema);
+    const compatibility = await client.checkCompatibility(
+      subject,
+      '1',
+      newSchema,
+    )
     expect(compatibility.is_compatible).toBe(true);
-  });
+  })
 
   // 5. Error Handling Tests
   it('should handle schema not found error', async () => {
-    await expect(client.getSchemaById(99999)).rejects.toThrow('Schema not found');
+    await expect(client.getSchemaById(99999)).rejects.toThrow(
+      'Schema not found',
+    )
   });
 
   it('should handle encoding error for invalid payload', async () => {
@@ -133,6 +142,8 @@ describe('Integration Tests with Confluent Cloud and Local Services', () => {
       fields: [{ name: 'field1', type: 'string' }],
     });
 
-    await expect(avroHelper.encodeMessage(subject, payload)).rejects.toThrow('Invalid payload');
+    await expect(avroHelper.encodeMessage(subject, payload)).rejects.toThrow(
+      'Invalid payload',
+    )
   });
-});
+})

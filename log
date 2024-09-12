@@ -1,0 +1,706 @@
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/avro/index.ts
+   1:23  error    Replace `'avsc'` with `"avsc"`                                               prettier/prettier
+   1:29  error    Extra semicolon                                                              semi
+   2:8   warning  Using exported name 'SchemaRegistryClient' as identifier for default export  import/no-named-as-default
+   2:34  error    Replace `'../client'` with `"../client"`                                     prettier/prettier
+   2:45  error    Extra semicolon                                                              semi
+   3:32  error    Replace `'../wire'` with `"../wire"`                                         prettier/prettier
+   3:41  error    Extra semicolon                                                              semi
+   9:53  error    Extra semicolon                                                              semi
+  11:3   error    Missing JSDoc block description                                              jsdoc/require-description
+  13:1   warning  Missing JSDoc @param "schemaRegistryClient" description                      jsdoc/require-param-description
+  16:53  error    Extra semicolon                                                              semi
+  19:3   error    Missing JSDoc block description                                              jsdoc/require-description
+  19:3   warning  Missing JSDoc @returns declaration                                           jsdoc/require-returns
+  21:1   warning  Missing JSDoc @param "subject" description                                   jsdoc/require-param-description
+  22:1   warning  Missing JSDoc @param "payload" description                                   jsdoc/require-param-description
+  28:79  error    Extra semicolon                                                              semi
+  29:56  error    Extra semicolon                                                              semi
+  30:57  error    Extra semicolon                                                              semi
+  32:48  error    Extra semicolon                                                              semi
+  35:3   error    Missing JSDoc block description                                              jsdoc/require-description
+  35:3   warning  Missing JSDoc @returns declaration                                           jsdoc/require-returns
+  37:1   warning  Missing JSDoc @param "buffer" description                                    jsdoc/require-param-description
+  39:55  error    Unexpected any. Specify a different type                                     @typescript-eslint/no-explicit-any
+  40:51  error    Extra semicolon                                                              semi
+  41:77  error    Extra semicolon                                                              semi
+  42:56  error    Extra semicolon                                                              semi
+  44:40  error    Extra semicolon                                                              semi
+  48:26  error    Extra semicolon                                                              semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/client/index.ts
+   12:8   error    Strings must use singlequote                                                            quotes
+   12:17  error    Extra semicolon                                                                         semi
+   18:2   error    Extra semicolon                                                                         semi
+   24:23  error    Extra semicolon                                                                         semi
+   25:56  error    Extra semicolon                                                                         semi
+   26:28  error    Extra semicolon                                                                         semi
+   27:30  error    Extra semicolon                                                                         semi
+   29:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+   31:1   warning  Missing JSDoc @param "root0" description                                                jsdoc/require-param-description
+   32:1   warning  Missing JSDoc @param "root0.host" description                                           jsdoc/require-param-description
+   33:1   warning  Missing JSDoc @param "root0.auth" description                                           jsdoc/require-param-description
+   34:1   warning  Missing JSDoc @param "root0.clientId" description                                       jsdoc/require-param-description
+   35:1   warning  Missing JSDoc @param "root0.retry" description                                          jsdoc/require-param-description
+   43:21  error    Extra semicolon                                                                         semi
+   44:21  error    Extra semicolon                                                                         semi
+   45:29  error    Extra semicolon                                                                         semi
+   46:48  error    Extra semicolon                                                                         semi
+   54:20  error    Extra semicolon                                                                         semi
+   57:51  error    Extra semicolon                                                                         semi
+   58:41  error    Extra semicolon                                                                         semi
+   61:48  error    Extra semicolon                                                                         semi
+   62:9   error    Unexpected console statement                                                            no-console
+   67:11  error    Extra semicolon                                                                         semi
+   72:10  error    Insert `;`                                                                              prettier/prettier
+   73:23  error    Unexpected any. Specify a different type                                                @typescript-eslint/no-explicit-any
+   77:12  error    Insert `;`                                                                              prettier/prettier
+   80:16  error    Extra semicolon                                                                         semi
+   83:8   error    Insert `;`                                                                              prettier/prettier
+   87:6   error    Insert `;`                                                                              prettier/prettier
+   92:36  error    Replace `'Content-Type':·'application/json'` with `"Content-Type":·"application/json"`  prettier/prettier
+   92:72  error    Extra semicolon                                                                         semi
+   96:18  error    Replace `'base64'` with `"base64"`                                                      prettier/prettier
+   96:27  error    Extra semicolon                                                                         semi
+   97:15  error    Replace `'Authorization'` with `"Authorization"`                                        prettier/prettier
+   97:54  error    Extra semicolon                                                                         semi
+  100:15  error    Replace `'Client-Id'` with `"Client-Id"`                                                prettier/prettier
+  100:43  error    Extra semicolon                                                                         semi
+  102:19  error    Extra semicolon                                                                         semi
+  107:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  107:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  109:1   warning  Missing JSDoc @param "subject" description                                              jsdoc/require-param-description
+  110:1   warning  Missing JSDoc @param "schema" description                                               jsdoc/require-param-description
+  116:60  error    Extra semicolon                                                                         semi
+  118:15  error    Replace `'POST'` with `"POST"`                                                          prettier/prettier
+  123:6   error    Extra semicolon                                                                         semi
+  125:61  error    Extra semicolon                                                                         semi
+  128:46  error    Extra semicolon                                                                         semi
+  129:65  error    Extra semicolon                                                                         semi
+  132:62  error    Extra semicolon                                                                         semi
+  135:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  135:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  137:1   warning  Missing JSDoc @param "id" description                                                   jsdoc/require-param-description
+  140:49  error    Extra semicolon                                                                         semi
+  142:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  144:6   error    Extra semicolon                                                                         semi
+  146:61  error    Extra semicolon                                                                         semi
+  149:46  error    Extra semicolon                                                                         semi
+  150:76  error    Extra semicolon                                                                         semi
+  153:61  error    Extra semicolon                                                                         semi
+  156:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  156:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  158:1   warning  Missing JSDoc @param "subject" description                                              jsdoc/require-param-description
+  159:1   warning  Missing JSDoc @param "version" description                                              jsdoc/require-param-description
+  163:23  error    Replace `'latest'` with `"latest"`                                                      prettier/prettier
+  165:71  error    Extra semicolon                                                                         semi
+  167:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  169:6   error    Extra semicolon                                                                         semi
+  170:61  error    Extra semicolon                                                                         semi
+  171:61  error    Extra semicolon                                                                         semi
+  174:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  174:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  176:1   warning  Missing JSDoc @param "subject" description                                              jsdoc/require-param-description
+  181:60  error    Extra semicolon                                                                         semi
+  183:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  185:6   error    Extra semicolon                                                                         semi
+  186:61  error    Extra semicolon                                                                         semi
+  187:64  error    Extra semicolon                                                                         semi
+  192:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  192:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  196:40  error    Extra semicolon                                                                         semi
+  198:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  200:6   error    Extra semicolon                                                                         semi
+  201:61  error    Extra semicolon                                                                         semi
+  202:62  error    Extra semicolon                                                                         semi
+  205:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  207:1   warning  Missing JSDoc @param "subject" description                                              jsdoc/require-param-description
+  210:51  error    Extra semicolon                                                                         semi
+  212:15  error    Replace `'DELETE'` with `"DELETE"`                                                      prettier/prettier
+  214:6   error    Extra semicolon                                                                         semi
+  215:61  error    Extra semicolon                                                                         semi
+  218:46  error    Extra semicolon                                                                         semi
+  219:75  error    Extra semicolon                                                                         semi
+  225:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  225:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  227:1   warning  Missing JSDoc @param "subject" description                                              jsdoc/require-param-description
+  228:1   warning  Missing JSDoc @param "version" description                                              jsdoc/require-param-description
+  229:1   warning  Missing JSDoc @param "schema" description                                               jsdoc/require-param-description
+  236:85  error    Extra semicolon                                                                         semi
+  238:15  error    Replace `'POST'` with `"POST"`                                                          prettier/prettier
+  241:6   error    Extra semicolon                                                                         semi
+  242:61  error    Extra semicolon                                                                         semi
+  243:61  error    Extra semicolon                                                                         semi
+  246:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  246:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  250:38  error    Extra semicolon                                                                         semi
+  252:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  254:6   error    Extra semicolon                                                                         semi
+  255:61  error    Extra semicolon                                                                         semi
+  256:67  error    Extra semicolon                                                                         semi
+  259:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  261:1   warning  Missing JSDoc @param "level" description                                                jsdoc/require-param-description
+  264:38  error    Extra semicolon                                                                         semi
+  266:15  error    Replace `'PUT'` with `"PUT"`                                                            prettier/prettier
+  269:6   error    Extra semicolon                                                                         semi
+  270:61  error    Extra semicolon                                                                         semi
+  273:46  error    Extra semicolon                                                                         semi
+  274:74  error    Extra semicolon                                                                         semi
+  280:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  280:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  284:36  error    Extra semicolon                                                                         semi
+  286:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  288:6   error    Extra semicolon                                                                         semi
+  289:61  error    Extra semicolon                                                                         semi
+  290:52  error    Extra semicolon                                                                         semi
+  293:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  295:1   warning  Missing JSDoc @param "mode" description                                                 jsdoc/require-param-description
+  298:36  error    Extra semicolon                                                                         semi
+  300:15  error    Replace `'PUT'` with `"PUT"`                                                            prettier/prettier
+  303:6   error    Extra semicolon                                                                         semi
+  305:61  error    Extra semicolon                                                                         semi
+  308:46  error    Extra semicolon                                                                         semi
+  309:58  error    Extra semicolon                                                                         semi
+  314:3   error    Missing JSDoc block description                                                         jsdoc/require-description
+  314:3   warning  Missing JSDoc @returns declaration                                                      jsdoc/require-returns
+  318:32  error    Extra semicolon                                                                         semi
+  320:15  error    Replace `'GET'` with `"GET"`                                                            prettier/prettier
+  322:6   error    Extra semicolon                                                                         semi
+  323:61  error    Extra semicolon                                                                         semi
+  324:58  error    Extra semicolon                                                                         semi
+  328:36  error    Extra semicolon                                                                         semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/client/model.ts
+    2:18  error  Multiple exports of name 'RetryOptions'                 import/export
+    8:18  error  Multiple exports of name 'SchemaRegistryAPIClientArgs'  import/export
+   16:18  error  Multiple exports of name 'RegisterSchemaRequest'        import/export
+   21:18  error  Multiple exports of name 'RegisterSchemaResponse'       import/export
+   29:18  error  Multiple exports of name 'GetSchemaByIdResponse'        import/export
+   37:18  error  Multiple exports of name 'GetAllVersionsResponse'       import/export
+   44:18  error  Multiple exports of name 'CompatibilityResponse'        import/export
+   49:18  error  Multiple exports of name 'GlobalCompatibilityResponse'  import/export
+   54:18  error  Multiple exports of name 'ModeResponse'                 import/export
+   59:18  error  Multiple exports of name 'ServerInfoResponse'           import/export
+   66:18  error  Multiple exports of name 'RetryOptions'                 import/export
+   72:18  error  Multiple exports of name 'SchemaRegistryAPIClientArgs'  import/export
+   80:18  error  Multiple exports of name 'RegisterSchemaRequest'        import/export
+   85:18  error  Multiple exports of name 'RegisterSchemaResponse'       import/export
+   93:18  error  Multiple exports of name 'GetSchemaByIdResponse'        import/export
+  101:18  error  Multiple exports of name 'GetAllVersionsResponse'       import/export
+  111:18  error  Multiple exports of name 'CompatibilityResponse'        import/export
+  116:18  error  Multiple exports of name 'GlobalCompatibilityResponse'  import/export
+  121:18  error  Multiple exports of name 'ModeResponse'                 import/export
+  126:18  error  Multiple exports of name 'ServerInfoResponse'           import/export
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/client/schema-registry-client.test.ts
+    1:8   warning  Using exported name 'SchemaRegistryClient' as identifier for default export                                                                                                                                 import/no-named-as-default
+    1:34  error    Replace `'.'` with `"."`                                                                                                                                                                                    prettier/prettier
+    1:37  error    Extra semicolon                                                                                                                                                                                             semi
+    3:10  error    Replace `'SchemaRegistryClient'` with `"SchemaRegistryClient"`                                                                                                                                              prettier/prettier
+    5:11  error    Replace `'https://schema-registry-url'` with `"https://schema-registry-url"`                                                                                                                                prettier/prettier
+    6:23  error    Replace `'user',·password:·'pass'` with `"user",·password:·"pass"`                                                                                                                                          prettier/prettier
+    7:15  error    Replace `'my-client-id'` with `"my-client-id"`                                                                                                                                                              prettier/prettier
+    8:5   error    Extra semicolon                                                                                                                                                                                             semi
+   11:29  error    Extra semicolon                                                                                                                                                                                             semi
+   12:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+   15:25  error    Extra semicolon                                                                                                                                                                                             semi
+   16:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+   19:12  error    Replace `'Schemas'` with `"Schemas"`                                                                                                                                                                        prettier/prettier
+   20:8   error    Replace `'should·register·a·new·schema·(Happy·Path)'` with `"should·register·a·new·schema·(Happy·Path)"`                                                                                                    prettier/prettier
+   25:9   error    Extra semicolon                                                                                                                                                                                             semi
+   27:52  error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+   28:15  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+   29:15  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+   31:9   error    Extra semicolon                                                                                                                                                                                             semi
+   32:45  error    Extra semicolon                                                                                                                                                                                             semi
+   34:9   error    Replace `'https://schema-registry-url/subjects/my-subject/versions'` with `"https://schema-registry-url/subjects/my-subject/versions"`                                                                      prettier/prettier
+   36:19  error    Replace `'POST'` with `"POST"`                                                                                                                                                                              prettier/prettier
+   40:21  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+   41:21  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+   46:8   error    Extra semicolon                                                                                                                                                                                             semi
+   47:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+   49:8   error    Replace `'should·handle·network·error·when·registering·a·schema·(Sad·Path)'` with `"should·handle·network·error·when·registering·a·schema·(Sad·Path)"`                                                      prettier/prettier
+   50:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+   50:80  error    Extra semicolon                                                                                                                                                                                             semi
+   53:31  error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+   54:17  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+   55:17  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+   58:25  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+   58:43  error    Extra semicolon                                                                                                                                                                                             semi
+   59:7   error    Extra semicolon                                                                                                                                                                                             semi
+   61:8   error    Replace `'should·handle·non-200·HTTP·response·when·registering·a·schema·(Sad·Path)'` with `"should·handle·non-200·HTTP·response·when·registering·a·schema·(Sad·Path)"`                                      prettier/prettier
+   65:21  error    Replace `'Internal·Server·Error'` with `"Internal·Server·Error"`                                                                                                                                            prettier/prettier
+   66:43  error    Replace `'Error·body'` with `"Error·body"`                                                                                                                                                                  prettier/prettier
+   67:9   error    Extra semicolon                                                                                                                                                                                             semi
+   70:31  error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+   71:17  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+   72:17  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+   76:9   error    Replace `'HTTP·error:·500·Internal·Server·Error.·Body:·Error·body'` with `"HTTP·error:·500·Internal·Server·Error.·Body:·Error·body"`                                                                        prettier/prettier
+   77:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+   78:7   error    Extra semicolon                                                                                                                                                                                             semi
+   80:8   error    Replace `'should·fetch·a·schema·by·ID·(Happy·Path)'` with `"should·fetch·a·schema·by·ID·(Happy·Path)"`                                                                                                      prettier/prettier
+   81:45  error    Replace `'{}'` with `"{}"`                                                                                                                                                                                  prettier/prettier
+   85:9   error    Extra semicolon                                                                                                                                                                                             semi
+   87:51  error    Extra semicolon                                                                                                                                                                                             semi
+   88:43  error    Extra semicolon                                                                                                                                                                                             semi
+   90:9   error    Replace `'https://schema-registry-url/schemas/ids/1'` with `"https://schema-registry-url/schemas/ids/1"`                                                                                                    prettier/prettier
+   92:19  error    Replace `'GET'` with `"GET"`                                                                                                                                                                                prettier/prettier
+   95:8   error    Extra semicolon                                                                                                                                                                                             semi
+   96:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+   98:8   error    Replace `'should·handle·network·error·when·fetching·a·schema·by·ID·(Sad·Path)'` with `"should·handle·network·error·when·fetching·a·schema·by·ID·(Sad·Path)"`                                                prettier/prettier
+   99:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+   99:80  error    Extra semicolon                                                                                                                                                                                             semi
+  101:61  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  101:79  error    Extra semicolon                                                                                                                                                                                             semi
+  102:7   error    Extra semicolon                                                                                                                                                                                             semi
+  104:8   error    Replace `'should·handle·404·Not·Found·when·fetching·a·schema·by·ID·(Sad·Path)'` with `"should·handle·404·Not·Found·when·fetching·a·schema·by·ID·(Sad·Path)"`                                                prettier/prettier
+  108:21  error    Replace `'Not·Found'` with `"Not·Found"`                                                                                                                                                                    prettier/prettier
+  109:43  error    Replace `'Not·found'` with `"Not·found"`                                                                                                                                                                    prettier/prettier
+  110:9   error    Extra semicolon                                                                                                                                                                                             semi
+  113:9   error    Replace `'HTTP·error:·404·Not·Found.·Body:·Not·found'` with `"HTTP·error:·404·Not·Found.·Body:·Not·found"`                                                                                                  prettier/prettier
+  114:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  115:7   error    Extra semicolon                                                                                                                                                                                             semi
+  117:8   error    Replace `'should·fetch·a·schema·by·version·(Happy·Path)'` with `"should·fetch·a·schema·by·version·(Happy·Path)"`                                                                                            prettier/prettier
+  118:45  error    Replace `'{}'` with `"{}"`                                                                                                                                                                                  prettier/prettier
+  122:9   error    Extra semicolon                                                                                                                                                                                             semi
+  124:54  error    Replace `'my-subject',·'latest'` with `"my-subject",·"latest"`                                                                                                                                              prettier/prettier
+  124:77  error    Extra semicolon                                                                                                                                                                                             semi
+  125:43  error    Extra semicolon                                                                                                                                                                                             semi
+  127:9   error    Replace `'https://schema-registry-url/subjects/my-subject/versions/latest'` with `"https://schema-registry-url/subjects/my-subject/versions/latest"`                                                        prettier/prettier
+  129:19  error    Replace `'GET'` with `"GET"`                                                                                                                                                                                prettier/prettier
+  132:8   error    Extra semicolon                                                                                                                                                                                             semi
+  133:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  135:8   error    Replace `'should·handle·network·error·when·fetching·a·schema·by·version·(Sad·Path)'` with `"should·handle·network·error·when·fetching·a·schema·by·version·(Sad·Path)"`                                      prettier/prettier
+  136:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  136:80  error    Extra semicolon                                                                                                                                                                                             semi
+  139:35  error    Replace `'my-subject',·'latest'` with `"my-subject",·"latest"`                                                                                                                                              prettier/prettier
+  140:25  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  140:43  error    Extra semicolon                                                                                                                                                                                             semi
+  141:7   error    Extra semicolon                                                                                                                                                                                             semi
+  143:8   error    Replace `'should·handle·500·Internal·Server·Error·when·fetching·a·schema·by·version·(Sad·Path)'` with `"should·handle·500·Internal·Server·Error·when·fetching·a·schema·by·version·(Sad·Path)"`              prettier/prettier
+  147:21  error    Replace `'Internal·Server·Error'` with `"Internal·Server·Error"`                                                                                                                                            prettier/prettier
+  148:43  error    Replace `'Internal·server·error'` with `"Internal·server·error"`                                                                                                                                            prettier/prettier
+  149:9   error    Extra semicolon                                                                                                                                                                                             semi
+  152:35  error    Replace `'my-subject',·'latest'` with `"my-subject",·"latest"`                                                                                                                                              prettier/prettier
+  154:9   error    Replace `'HTTP·error:·500·Internal·Server·Error.·Body:·Internal·server·error'` with `"HTTP·error:·500·Internal·Server·Error.·Body:·Internal·server·error"`                                                  prettier/prettier
+  155:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  156:7   error    Extra semicolon                                                                                                                                                                                             semi
+  157:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  160:12  error    Replace `'Subjects'` with `"Subjects"`                                                                                                                                                                      prettier/prettier
+  161:8   error    Replace `'should·list·all·subjects·(Happy·Path)'` with `"should·list·all·subjects·(Happy·Path)"`                                                                                                            prettier/prettier
+  162:29  error    Replace `'subject1',·'subject2'` with `"subject1",·"subject2"`                                                                                                                                              prettier/prettier
+  166:9   error    Extra semicolon                                                                                                                                                                                             semi
+  168:53  error    Extra semicolon                                                                                                                                                                                             semi
+  169:45  error    Extra semicolon                                                                                                                                                                                             semi
+  171:9   error    Replace `'https://schema-registry-url/subjects'` with `"https://schema-registry-url/subjects"`                                                                                                              prettier/prettier
+  173:19  error    Replace `'GET'` with `"GET"`                                                                                                                                                                                prettier/prettier
+  176:8   error    Extra semicolon                                                                                                                                                                                             semi
+  177:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  179:8   error    Replace `'should·handle·network·error·when·listing·all·subjects·(Sad·Path)'` with `"should·handle·network·error·when·listing·all·subjects·(Sad·Path)"`                                                      prettier/prettier
+  180:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  180:80  error    Extra semicolon                                                                                                                                                                                             semi
+  182:61  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  182:79  error    Extra semicolon                                                                                                                                                                                             semi
+  183:7   error    Extra semicolon                                                                                                                                                                                             semi
+  185:8   error    Replace `'should·handle·403·Forbidden·when·listing·all·subjects·(Sad·Path)'` with `"should·handle·403·Forbidden·when·listing·all·subjects·(Sad·Path)"`                                                      prettier/prettier
+  189:21  error    Replace `'Forbidden'` with `"Forbidden"`                                                                                                                                                                    prettier/prettier
+  190:43  error    Replace `'Forbidden'` with `"Forbidden"`                                                                                                                                                                    prettier/prettier
+  191:9   error    Extra semicolon                                                                                                                                                                                             semi
+  194:9   error    Replace `'HTTP·error:·403·Forbidden.·Body:·Forbidden'` with `"HTTP·error:·403·Forbidden.·Body:·Forbidden"`                                                                                                  prettier/prettier
+  195:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  196:7   error    Extra semicolon                                                                                                                                                                                             semi
+  198:8   error    Replace `'should·delete·a·subject·(Happy·Path)'` with `"should·delete·a·subject·(Happy·Path)"`                                                                                                              prettier/prettier
+  201:9   error    Extra semicolon                                                                                                                                                                                             semi
+  203:51  error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+  203:64  error    Extra semicolon                                                                                                                                                                                             semi
+  204:39  error    Extra semicolon                                                                                                                                                                                             semi
+  206:9   error    Replace `'https://schema-registry-url/subjects/my-subject'` with `"https://schema-registry-url/subjects/my-subject"`                                                                                        prettier/prettier
+  208:19  error    Replace `'DELETE'` with `"DELETE"`                                                                                                                                                                          prettier/prettier
+  211:8   error    Extra semicolon                                                                                                                                                                                             semi
+  212:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  214:8   error    Replace `'should·handle·network·error·when·deleting·a·subject·(Sad·Path)'` with `"should·handle·network·error·when·deleting·a·subject·(Sad·Path)"`                                                          prettier/prettier
+  215:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  215:80  error    Extra semicolon                                                                                                                                                                                             semi
+  217:41  error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+  218:9   error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  219:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  220:7   error    Extra semicolon                                                                                                                                                                                             semi
+  222:8   error    Replace `'should·handle·404·Not·Found·when·deleting·a·subject·(Sad·Path)'` with `"should·handle·404·Not·Found·when·deleting·a·subject·(Sad·Path)"`                                                          prettier/prettier
+  226:21  error    Replace `'Not·Found'` with `"Not·Found"`                                                                                                                                                                    prettier/prettier
+  227:43  error    Replace `'Subject·not·found'` with `"Subject·not·found"`                                                                                                                                                    prettier/prettier
+  228:9   error    Extra semicolon                                                                                                                                                                                             semi
+  230:41  error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+  231:9   error    Replace `'HTTP·error:·404·Not·Found.·Body:·Subject·not·found'` with `"HTTP·error:·404·Not·Found.·Body:·Subject·not·found"`                                                                                  prettier/prettier
+  232:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  233:7   error    Extra semicolon                                                                                                                                                                                             semi
+  234:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  237:12  error    Replace `'Compatibility'` with `"Compatibility"`                                                                                                                                                            prettier/prettier
+  238:8   error    Replace `'should·check·schema·compatibility·(Happy·Path)'` with `"should·check·schema·compatibility·(Happy·Path)"`                                                                                          prettier/prettier
+  243:9   error    Extra semicolon                                                                                                                                                                                             semi
+  246:9   error    Replace `'my-subject'` with `"my-subject"`                                                                                                                                                                  prettier/prettier
+  247:9   error    Replace `'latest'` with `"latest"`                                                                                                                                                                          prettier/prettier
+  248:17  error    Replace `'record',·name:·'MyRecord'` with `"record",·name:·"MyRecord"`                                                                                                                                      prettier/prettier
+  249:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  250:50  error    Extra semicolon                                                                                                                                                                                             semi
+  252:9   error    Replace `'https://schema-registry-url/compatibility/subjects/my-subject/versions/latest'` with `"https://schema-registry-url/compatibility/subjects/my-subject/versions/latest"`                            prettier/prettier
+  254:19  error    Replace `'POST'` with `"POST"`                                                                                                                                                                              prettier/prettier
+  257:19  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+  258:19  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+  262:8   error    Extra semicolon                                                                                                                                                                                             semi
+  263:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  265:8   error    Replace `'should·handle·network·error·when·checking·schema·compatibility·(Sad·Path)'` with `"should·handle·network·error·when·checking·schema·compatibility·(Sad·Path)"`                                    prettier/prettier
+  266:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  266:80  error    Extra semicolon                                                                                                                                                                                             semi
+  269:35  error    Replace `'my-subject',·'latest'` with `"my-subject",·"latest"`                                                                                                                                              prettier/prettier
+  270:17  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+  271:17  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+  274:25  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  274:43  error    Extra semicolon                                                                                                                                                                                             semi
+  275:7   error    Extra semicolon                                                                                                                                                                                             semi
+  277:8   error    Replace `'should·handle·400·Bad·Request·when·checking·schema·compatibility·(Sad·Path)'` with `"should·handle·400·Bad·Request·when·checking·schema·compatibility·(Sad·Path)"`                                prettier/prettier
+  281:21  error    Replace `'Bad·Request'` with `"Bad·Request"`                                                                                                                                                                prettier/prettier
+  282:43  error    Replace `'Bad·request'` with `"Bad·request"`                                                                                                                                                                prettier/prettier
+  283:9   error    Extra semicolon                                                                                                                                                                                             semi
+  286:35  error    Replace `'my-subject',·'latest'` with `"my-subject",·"latest"`                                                                                                                                              prettier/prettier
+  287:17  error    Replace `'record'` with `"record"`                                                                                                                                                                          prettier/prettier
+  288:17  error    Replace `'MyRecord'` with `"MyRecord"`                                                                                                                                                                      prettier/prettier
+  291:25  error    Replace `'HTTP·error:·400·Bad·Request.·Body:·Bad·request'` with `"HTTP·error:·400·Bad·Request.·Body:·Bad·request"`                                                                                          prettier/prettier
+  291:74  error    Extra semicolon                                                                                                                                                                                             semi
+  292:7   error    Extra semicolon                                                                                                                                                                                             semi
+  294:8   error    Replace `'should·get·global·compatibility·level·(Happy·Path)'` with `"should·get·global·compatibility·level·(Happy·Path)"`                                                                                  prettier/prettier
+  295:50  error    Replace `'FULL'` with `"FULL"`                                                                                                                                                                              prettier/prettier
+  299:9   error    Extra semicolon                                                                                                                                                                                             semi
+  301:66  error    Extra semicolon                                                                                                                                                                                             semi
+  302:50  error    Extra semicolon                                                                                                                                                                                             semi
+  304:9   error    Replace `'https://schema-registry-url/config'` with `"https://schema-registry-url/config"`                                                                                                                  prettier/prettier
+  306:19  error    Replace `'GET'` with `"GET"`                                                                                                                                                                                prettier/prettier
+  309:8   error    Extra semicolon                                                                                                                                                                                             semi
+  310:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  312:8   error    Replace `'should·handle·network·error·when·getting·global·compatibility·level·(Sad·Path)'` with `"should·handle·network·error·when·getting·global·compatibility·level·(Sad·Path)"`                          prettier/prettier
+  313:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  313:80  error    Extra semicolon                                                                                                                                                                                             semi
+  316:9   error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  317:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  318:7   error    Extra semicolon                                                                                                                                                                                             semi
+  320:8   error    Replace `'should·handle·403·Forbidden·when·getting·global·compatibility·level·(Sad·Path)'` with `"should·handle·403·Forbidden·when·getting·global·compatibility·level·(Sad·Path)"`                          prettier/prettier
+  324:21  error    Replace `'Forbidden'` with `"Forbidden"`                                                                                                                                                                    prettier/prettier
+  325:43  error    Replace `'Forbidden'` with `"Forbidden"`                                                                                                                                                                    prettier/prettier
+  326:9   error    Extra semicolon                                                                                                                                                                                             semi
+  329:9   error    Replace `'HTTP·error:·403·Forbidden.·Body:·Forbidden'` with `"HTTP·error:·403·Forbidden.·Body:·Forbidden"`                                                                                                  prettier/prettier
+  330:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  331:7   error    Extra semicolon                                                                                                                                                                                             semi
+  333:8   error    Replace `'should·set·global·compatibility·level·(Happy·Path)'` with `"should·set·global·compatibility·level·(Happy·Path)"`                                                                                  prettier/prettier
+  336:9   error    Extra semicolon                                                                                                                                                                                             semi
+  338:65  error    Replace `'FULL'` with `"FULL"`                                                                                                                                                                              prettier/prettier
+  338:72  error    Extra semicolon                                                                                                                                                                                             semi
+  339:44  error    Extra semicolon                                                                                                                                                                                             semi
+  341:9   error    Replace `'https://schema-registry-url/config'` with `"https://schema-registry-url/config"`                                                                                                                  prettier/prettier
+  343:19  error    Replace `'PUT'` with `"PUT"`                                                                                                                                                                                prettier/prettier
+  345:49  error    Replace `'FULL'` with `"FULL"`                                                                                                                                                                              prettier/prettier
+  347:8   error    Extra semicolon                                                                                                                                                                                             semi
+  348:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  350:8   error    Replace `'should·handle·network·error·when·setting·global·compatibility·level·(Sad·Path)'` with `"should·handle·network·error·when·setting·global·compatibility·level·(Sad·Path)"`                          prettier/prettier
+  351:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  351:80  error    Extra semicolon                                                                                                                                                                                             semi
+  353:50  error    Replace `'FULL'` with `"FULL"`                                                                                                                                                                              prettier/prettier
+  354:9   error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  355:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  356:7   error    Extra semicolon                                                                                                                                                                                             semi
+  358:8   error    Replace `'should·handle·500·Internal·Server·Error·when·setting·global·compatibility·level·(Sad·Path)'` with `"should·handle·500·Internal·Server·Error·when·setting·global·compatibility·level·(Sad·Path)"`  prettier/prettier
+  362:21  error    Replace `'Internal·Server·Error'` with `"Internal·Server·Error"`                                                                                                                                            prettier/prettier
+  363:43  error    Replace `'Server·error'` with `"Server·error"`                                                                                                                                                              prettier/prettier
+  364:9   error    Extra semicolon                                                                                                                                                                                             semi
+  366:50  error    Replace `'FULL'` with `"FULL"`                                                                                                                                                                              prettier/prettier
+  367:9   error    Replace `'HTTP·error:·500·Internal·Server·Error.·Body:·Server·error'` with `"HTTP·error:·500·Internal·Server·Error.·Body:·Server·error"`                                                                    prettier/prettier
+  368:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  369:7   error    Extra semicolon                                                                                                                                                                                             semi
+  370:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  373:12  error    Replace `'Modes'` with `"Modes"`                                                                                                                                                                            prettier/prettier
+  374:8   error    Replace `'should·get·mode·(Happy·Path)'` with `"should·get·mode·(Happy·Path)"`                                                                                                                              prettier/prettier
+  375:36  error    Replace `'READWRITE'` with `"READWRITE"`                                                                                                                                                                    prettier/prettier
+  379:9   error    Extra semicolon                                                                                                                                                                                             semi
+  381:42  error    Extra semicolon                                                                                                                                                                                             semi
+  382:41  error    Extra semicolon                                                                                                                                                                                             semi
+  384:9   error    Replace `'https://schema-registry-url/mode'` with `"https://schema-registry-url/mode"`                                                                                                                      prettier/prettier
+  386:19  error    Replace `'GET'` with `"GET"`                                                                                                                                                                                prettier/prettier
+  389:8   error    Extra semicolon                                                                                                                                                                                             semi
+  390:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  392:8   error    Replace `'should·handle·network·error·when·getting·mode·(Sad·Path)'` with `"should·handle·network·error·when·getting·mode·(Sad·Path)"`                                                                      prettier/prettier
+  393:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  393:80  error    Extra semicolon                                                                                                                                                                                             semi
+  395:54  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  395:72  error    Extra semicolon                                                                                                                                                                                             semi
+  396:7   error    Extra semicolon                                                                                                                                                                                             semi
+  398:8   error    Replace `'should·handle·403·Forbidden·when·getting·mode·(Sad·Path)'` with `"should·handle·403·Forbidden·when·getting·mode·(Sad·Path)"`                                                                      prettier/prettier
+  402:21  error    Replace `'Forbidden'` with `"Forbidden"`                                                                                                                                                                    prettier/prettier
+  403:43  error    Replace `'Forbidden'` with `"Forbidden"`                                                                                                                                                                    prettier/prettier
+  404:9   error    Extra semicolon                                                                                                                                                                                             semi
+  407:9   error    Replace `'HTTP·error:·403·Forbidden.·Body:·Forbidden'` with `"HTTP·error:·403·Forbidden.·Body:·Forbidden"`                                                                                                  prettier/prettier
+  408:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  409:7   error    Extra semicolon                                                                                                                                                                                             semi
+  411:8   error    Replace `'should·set·mode·(Happy·Path)'` with `"should·set·mode·(Happy·Path)"`                                                                                                                              prettier/prettier
+  414:9   error    Extra semicolon                                                                                                                                                                                             semi
+  416:41  error    Replace `'READWRITE'` with `"READWRITE"`                                                                                                                                                                    prettier/prettier
+  416:53  error    Extra semicolon                                                                                                                                                                                             semi
+  417:35  error    Extra semicolon                                                                                                                                                                                             semi
+  419:9   error    Replace `'https://schema-registry-url/mode'` with `"https://schema-registry-url/mode"`                                                                                                                      prettier/prettier
+  421:19  error    Replace `'PUT'` with `"PUT"`                                                                                                                                                                                prettier/prettier
+  423:40  error    Replace `'READWRITE'` with `"READWRITE"`                                                                                                                                                                    prettier/prettier
+  425:8   error    Extra semicolon                                                                                                                                                                                             semi
+  426:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  428:8   error    Replace `'should·handle·network·error·when·setting·mode·(Sad·Path)'` with `"should·handle·network·error·when·setting·mode·(Sad·Path)"`                                                                      prettier/prettier
+  429:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  429:80  error    Extra semicolon                                                                                                                                                                                             semi
+  431:35  error    Replace `'READWRITE'` with `"READWRITE"`                                                                                                                                                                    prettier/prettier
+  432:9   error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  433:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  434:7   error    Extra semicolon                                                                                                                                                                                             semi
+  436:8   error    Replace `'should·handle·500·Internal·Server·Error·when·setting·mode·(Sad·Path)'` with `"should·handle·500·Internal·Server·Error·when·setting·mode·(Sad·Path)"`                                              prettier/prettier
+  440:21  error    Replace `'Internal·Server·Error'` with `"Internal·Server·Error"`                                                                                                                                            prettier/prettier
+  441:43  error    Replace `'Server·error'` with `"Server·error"`                                                                                                                                                              prettier/prettier
+  442:9   error    Extra semicolon                                                                                                                                                                                             semi
+  444:35  error    Replace `'READWRITE'` with `"READWRITE"`                                                                                                                                                                    prettier/prettier
+  445:9   error    Replace `'HTTP·error:·500·Internal·Server·Error.·Body:·Server·error'` with `"HTTP·error:·500·Internal·Server·Error.·Body:·Server·error"`                                                                    prettier/prettier
+  446:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  447:7   error    Extra semicolon                                                                                                                                                                                             semi
+  448:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  451:12  error    Replace `'Server·Information'` with `"Server·Information"`                                                                                                                                                  prettier/prettier
+  452:8   error    Replace `'should·get·server·information·(Happy·Path)'` with `"should·get·server·information·(Happy·Path)"`                                                                                                  prettier/prettier
+  453:39  error    Replace `'5.4.0',·commitId:·'abcdef'` with `"5.4.0",·commitId:·"abcdef"`                                                                                                                                    prettier/prettier
+  457:9   error    Extra semicolon                                                                                                                                                                                             semi
+  459:54  error    Extra semicolon                                                                                                                                                                                             semi
+  460:47  error    Extra semicolon                                                                                                                                                                                             semi
+  462:9   error    Replace `'https://schema-registry-url/'` with `"https://schema-registry-url/"`                                                                                                                              prettier/prettier
+  464:19  error    Replace `'GET'` with `"GET"`                                                                                                                                                                                prettier/prettier
+  467:8   error    Extra semicolon                                                                                                                                                                                             semi
+  468:7   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  470:8   error    Replace `'should·handle·network·error·when·getting·server·information·(Sad·Path)'` with `"should·handle·network·error·when·getting·server·information·(Sad·Path)"`                                          prettier/prettier
+  471:63  error    Replace `'Network·Error'` with `"Network·Error"`                                                                                                                                                            prettier/prettier
+  471:80  error    Extra semicolon                                                                                                                                                                                             semi
+  473:60  error    Replace `'Failed·to·fetch'` with `"Failed·to·fetch"`                                                                                                                                                        prettier/prettier
+  473:78  error    Extra semicolon                                                                                                                                                                                             semi
+  474:7   error    Extra semicolon                                                                                                                                                                                             semi
+  476:8   error    Replace `'should·handle·404·Not·Found·when·getting·server·information·(Sad·Path)'` with `"should·handle·404·Not·Found·when·getting·server·information·(Sad·Path)"`                                          prettier/prettier
+  480:21  error    Replace `'Not·Found'` with `"Not·Found"`                                                                                                                                                                    prettier/prettier
+  481:43  error    Replace `'Not·found'` with `"Not·found"`                                                                                                                                                                    prettier/prettier
+  482:9   error    Extra semicolon                                                                                                                                                                                             semi
+  485:9   error    Replace `'HTTP·error:·404·Not·Found.·Body:·Not·found'` with `"HTTP·error:·404·Not·Found.·Body:·Not·found"`                                                                                                  prettier/prettier
+  486:8   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  487:7   error    Extra semicolon                                                                                                                                                                                             semi
+  488:5   error    Insert `;`                                                                                                                                                                                                  prettier/prettier
+  489:3   error    Extra semicolon                                                                                                                                                                                             semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/index.ts
+  1:15  error  Replace `'./avro'` with `"./avro"`          prettier/prettier
+  1:23  error  Extra semicolon                             semi
+  2:15  error  Replace `'./client'` with `"./client"`      prettier/prettier
+  2:25  error  Extra semicolon                             semi
+  3:15  error  Replace `'./wire'` with `"./wire"`          prettier/prettier
+  3:23  error  Extra semicolon                             semi
+  4:15  error  Replace `'./protobuf'` with `"./protobuf"`  prettier/prettier
+  4:27  error  Extra semicolon                             semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/integration.int.ts
+    1:8   warning  Using exported name 'SchemaRegistryClient' as identifier for default export                                                               import/no-named-as-default
+    1:34  error    Replace `'./client'` with `"./client"`                                                                                                    prettier/prettier
+    1:44  error    Extra semicolon                                                                                                                           semi
+    2:8   warning  Using exported name 'AvroHelper' as identifier for default export                                                                         import/no-named-as-default
+    2:24  error    Replace `'./avro'` with `"./avro"`                                                                                                        prettier/prettier
+    2:32  error    Extra semicolon                                                                                                                           semi
+    3:8   warning  Using exported name 'ProtoHelper' as identifier for default export                                                                        import/no-named-as-default
+    3:25  error    Replace `'./protobuf'` with `"./protobuf"`                                                                                                prettier/prettier
+    3:37  error    Extra semicolon                                                                                                                           semi
+    5:10  error    Replace `'Integration·Tests·with·Confluent·Cloud·and·Local·Services'` with `"Integration·Tests·with·Confluent·Cloud·and·Local·Services"`  prettier/prettier
+    7:21  error    Replace `'SCHEMA_REGISTRY_URL·is·not·set'` with `"SCHEMA_REGISTRY_URL·is·not·set"`                                                        prettier/prettier
+    7:54  error    Extra semicolon                                                                                                                           semi
+   11:5   error    Extra semicolon                                                                                                                           semi
+   13:29  error    Extra semicolon                                                                                                                           semi
+   14:31  error    Extra semicolon                                                                                                                           semi
+   17:40  error    Extra semicolon                                                                                                                           semi
+   18:42  error    Extra semicolon                                                                                                                           semi
+   19:5   error    Insert `;`                                                                                                                                prettier/prettier
+   21:6   error    Replace `'should·register·and·fetch·an·Avro·schema'` with `"should·register·and·fetch·an·Avro·schema"`                                    prettier/prettier
+   22:21  error    Replace `'test-subject-avro'` with `"test-subject-avro"`                                                                                  prettier/prettier
+   22:40  error    Extra semicolon                                                                                                                           semi
+   24:13  error    Replace `'record'` with `"record"`                                                                                                        prettier/prettier
+   25:13  error    Replace `'TestRecord'` with `"TestRecord"`                                                                                                prettier/prettier
+   26:24  error    Replace `'field1',·type:·'string'` with `"field1",·type:·"string"`                                                                        prettier/prettier
+   27:6   error    Extra semicolon                                                                                                                           semi
+   29:61  error    Extra semicolon                                                                                                                           semi
+   30:5   error    Unexpected console statement                                                                                                              no-console
+   30:21  error    Insert `;`                                                                                                                                prettier/prettier
+   31:33  error    Extra semicolon                                                                                                                           semi
+   33:61  error    Extra semicolon                                                                                                                           semi
+   34:65  error    Extra semicolon                                                                                                                           semi
+   35:5   error    Insert `;`                                                                                                                                prettier/prettier
+   37:6   error    Replace `'should·register·and·fetch·a·Protobuf·schema'` with `"should·register·and·fetch·a·Protobuf·schema"`                              prettier/prettier
+   38:21  error    Replace `'test-subject-protobuf'` with `"test-subject-protobuf"`                                                                          prettier/prettier
+   38:44  error    Extra semicolon                                                                                                                           semi
+   44:21  error    Strings must use singlequote                                                                                                              quotes
+   50:6   error    Extra semicolon                                                                                                                           semi
+   52:61  error    Extra semicolon                                                                                                                           semi
+   53:30  error    Extra semicolon                                                                                                                           semi
+   55:61  error    Extra semicolon                                                                                                                           semi
+   56:49  error    Extra semicolon                                                                                                                           semi
+   57:5   error    Insert `;`                                                                                                                                prettier/prettier
+   60:6   error    Replace `'should·encode·and·decode·Avro·messages'` with `"should·encode·and·decode·Avro·messages"`                                        prettier/prettier
+   61:21  error    Replace `'test-subject-avro'` with `"test-subject-avro"`                                                                                  prettier/prettier
+   61:40  error    Extra semicolon                                                                                                                           semi
+   62:31  error    Replace `'test'` with `"test"`                                                                                                            prettier/prettier
+   62:39  error    Extra semicolon                                                                                                                           semi
+   65:13  error    Replace `'record'` with `"record"`                                                                                                        prettier/prettier
+   66:13  error    Replace `'TestRecord'` with `"TestRecord"`                                                                                                prettier/prettier
+   67:24  error    Replace `'field1',·type:·'string'` with `"field1",·type:·"string"`                                                                        prettier/prettier
+   68:7   error    Extra semicolon                                                                                                                           semi
+   70:76  error    Extra semicolon                                                                                                                           semi
+   71:74  error    Extra semicolon                                                                                                                           semi
+   73:44  error    Extra semicolon                                                                                                                           semi
+   74:5   error    Insert `;`                                                                                                                                prettier/prettier
+   76:6   error    Replace `'should·encode·and·decode·Protobuf·messages'` with `"should·encode·and·decode·Protobuf·messages"`                                prettier/prettier
+   77:21  error    Replace `'test-subject-protobuf'` with `"test-subject-protobuf"`                                                                          prettier/prettier
+   77:44  error    Extra semicolon                                                                                                                           semi
+   83:21  error    Strings must use singlequote                                                                                                              quotes
+   89:6   error    Extra semicolon                                                                                                                           semi
+   90:31  error    Replace `'test'` with `"test"`                                                                                                            prettier/prettier
+   90:39  error    Extra semicolon                                                                                                                           semi
+   92:49  error    Extra semicolon                                                                                                                           semi
+   94:77  error    Extra semicolon                                                                                                                           semi
+   95:75  error    Extra semicolon                                                                                                                           semi
+   97:44  error    Extra semicolon                                                                                                                           semi
+   98:5   error    Insert `;`                                                                                                                                prettier/prettier
+  101:6   error    Replace `'should·check·schema·compatibility'` with `"should·check·schema·compatibility"`                                                  prettier/prettier
+  102:21  error    Replace `'test-subject-avro'` with `"test-subject-avro"`                                                                                  prettier/prettier
+  102:40  error    Extra semicolon                                                                                                                           semi
+  104:13  error    Replace `'record'` with `"record"`                                                                                                        prettier/prettier
+  105:13  error    Replace `'TestRecord'` with `"TestRecord"`                                                                                                prettier/prettier
+  106:24  error    Replace `'field1',·type:·'string'` with `"field1",·type:·"string"`                                                                        prettier/prettier
+  107:6   error    Extra semicolon                                                                                                                           semi
+  109:49  error    Extra semicolon                                                                                                                           semi
+  112:13  error    Replace `'record'` with `"record"`                                                                                                        prettier/prettier
+  113:13  error    Replace `'TestRecord'` with `"TestRecord"`                                                                                                prettier/prettier
+  115:17  error    Replace `'field1',·type:·'string'` with `"field1",·type:·"string"`                                                                        prettier/prettier
+  116:17  error    Replace `'field2',·type:·'int'` with `"field2",·type:·"int"`                                                                              prettier/prettier
+  118:6   error    Extra semicolon                                                                                                                           semi
+  122:7   error    Replace `'1'` with `"1"`                                                                                                                  prettier/prettier
+  124:6   error    Insert `;`                                                                                                                                prettier/prettier
+  125:51  error    Extra semicolon                                                                                                                           semi
+  126:5   error    Insert `;`                                                                                                                                prettier/prettier
+  129:6   error    Replace `'should·handle·schema·not·found·error'` with `"should·handle·schema·not·found·error"`                                            prettier/prettier
+  131:7   error    Replace `'Schema·not·found'` with `"Schema·not·found"`                                                                                    prettier/prettier
+  132:6   error    Insert `;`                                                                                                                                prettier/prettier
+  133:5   error    Extra semicolon                                                                                                                           semi
+  135:6   error    Replace `'should·handle·encoding·error·for·invalid·payload'` with `"should·handle·encoding·error·for·invalid·payload"`                    prettier/prettier
+  136:21  error    Replace `'test-subject-avro'` with `"test-subject-avro"`                                                                                  prettier/prettier
+  136:40  error    Extra semicolon                                                                                                                           semi
+  137:31  error    Replace `'test'` with `"test"`                                                                                                            prettier/prettier
+  137:39  error    Extra semicolon                                                                                                                           semi
+  140:13  error    Replace `'record'` with `"record"`                                                                                                        prettier/prettier
+  141:13  error    Replace `'TestRecord'` with `"TestRecord"`                                                                                                prettier/prettier
+  142:24  error    Replace `'field1',·type:·'string'` with `"field1",·type:·"string"`                                                                        prettier/prettier
+  143:7   error    Extra semicolon                                                                                                                           semi
+  146:7   error    Replace `'Invalid·payload'` with `"Invalid·payload"`                                                                                      prettier/prettier
+  147:6   error    Insert `;`                                                                                                                                prettier/prettier
+  148:5   error    Extra semicolon                                                                                                                           semi
+  149:3   error    Insert `;`                                                                                                                                prettier/prettier
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/protobuf/index.test.ts
+   1:22  error    Replace `'protobufjs'` with `"protobufjs"`                                                                        prettier/prettier
+   1:34  error    Extra semicolon                                                                                                   semi
+   2:8   warning  Using exported name 'SchemaRegistryClient' as identifier for default export                                       import/no-named-as-default
+   2:34  error    Strings must use singlequote                                                                                      quotes
+   2:45  error    Extra semicolon                                                                                                   semi
+   3:8   warning  Using exported name 'ProtoHelper' as identifier for default export                                                import/no-named-as-default
+   3:25  error    Strings must use singlequote                                                                                      quotes
+   3:28  error    Extra semicolon                                                                                                   semi
+   5:10  error    Replace `'ProtoHelper'` with `"ProtoHelper"`                                                                      prettier/prettier
+   7:11  error    Replace `'https://schema-registry-url'` with `"https://schema-registry-url"`                                      prettier/prettier
+   8:23  error    Replace `'user',·password:·'pass'` with `"user",·password:·"pass"`                                                prettier/prettier
+   9:5   error    Extra semicolon                                                                                                   semi
+  12:29  error    Extra semicolon                                                                                                   semi
+  13:5   error    Insert `;`                                                                                                        prettier/prettier
+  16:25  error    Extra semicolon                                                                                                   semi
+  17:5   error    Insert `;`                                                                                                        prettier/prettier
+  19:6   error    Replace `'should·encode·a·Protobuf·message·(Happy·Path)'` with `"should·encode·a·Protobuf·message·(Happy·Path)"`  prettier/prettier
+  25:13  error    Replace `'TestMessage'` with `"TestMessage"`                                                                      prettier/prettier
+  26:6   error    Extra semicolon                                                                                                   semi
+  27:31  error    Replace `'test'` with `"test"`                                                                                    prettier/prettier
+  32:7   error    Extra semicolon                                                                                                   semi
+  34:48  error    Extra semicolon                                                                                                   semi
+  35:52  error    Replace `'test-subject'` with `"test-subject"`                                                                    prettier/prettier
+  35:76  error    Extra semicolon                                                                                                   semi
+  36:42  error    Extra semicolon                                                                                                   semi
+  37:5   error    Insert `;`                                                                                                        prettier/prettier
+  39:6   error    Replace `'should·decode·a·Protobuf·message·(Happy·Path)'` with `"should·decode·a·Protobuf·message·(Happy·Path)"`  prettier/prettier
+  45:13  error    Replace `'TestMessage'` with `"TestMessage"`                                                                      prettier/prettier
+  46:6   error    Extra semicolon                                                                                                   semi
+  47:31  error    Replace `'test'` with `"test"`                                                                                    prettier/prettier
+  47:39  error    Extra semicolon                                                                                                   semi
+  49:46  error    Extra semicolon                                                                                                   semi
+  50:53  error    Extra semicolon                                                                                                   semi
+  56:7   error    Extra semicolon                                                                                                   semi
+  58:48  error    Extra semicolon                                                                                                   semi
+  59:80  error    Extra semicolon                                                                                                   semi
+  60:44  error    Extra semicolon                                                                                                   semi
+  61:5   error    Insert `;`                                                                                                        prettier/prettier
+  62:3   error    Extra semicolon                                                                                                   semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/protobuf/index.ts
+   1:22  error    Replace `'protobufjs'` with `"protobufjs"`                                   prettier/prettier
+   1:34  error    Extra semicolon                                                              semi
+   2:8   warning  Using exported name 'SchemaRegistryClient' as identifier for default export  import/no-named-as-default
+   2:34  error    Replace `'../client'` with `"../client"`                                     prettier/prettier
+   2:45  error    Extra semicolon                                                              semi
+   3:32  error    Replace `'../wire'` with `"../wire"`                                         prettier/prettier
+   3:41  error    Extra semicolon                                                              semi
+   9:53  error    Extra semicolon                                                              semi
+  11:3   error    Missing JSDoc block description                                              jsdoc/require-description
+  13:1   warning  Missing JSDoc @param "schemaRegistryClient" description                      jsdoc/require-param-description
+  16:53  error    Extra semicolon                                                              semi
+  19:3   error    Missing JSDoc block description                                              jsdoc/require-description
+  19:3   warning  Missing JSDoc @returns declaration                                           jsdoc/require-returns
+  21:1   warning  Missing JSDoc @param "subject" description                                   jsdoc/require-param-description
+  22:1   warning  Missing JSDoc @param "payload" description                                   jsdoc/require-param-description
+  28:76  error    Extra semicolon                                                              semi
+  29:42  error    Extra semicolon                                                              semi
+  30:39  error    Insert `;`                                                                   prettier/prettier
+  31:53  error    Extra semicolon                                                              semi
+  32:47  error    Extra semicolon                                                              semi
+  33:36  error    Extra semicolon                                                              semi
+  35:48  error    Extra semicolon                                                              semi
+  36:67  error    Insert `;`                                                                   prettier/prettier
+  38:61  error    Extra semicolon                                                              semi
+  41:3   error    Missing JSDoc block description                                              jsdoc/require-description
+  41:3   warning  Missing JSDoc @returns declaration                                           jsdoc/require-returns
+  43:1   warning  Missing JSDoc @param "buffer" description                                    jsdoc/require-param-description
+  45:55  error    Unexpected any. Specify a different type                                     @typescript-eslint/no-explicit-any
+  46:51  error    Extra semicolon                                                              semi
+  47:74  error    Extra semicolon                                                              semi
+  48:55  error    Extra semicolon                                                              semi
+  49:53  error    Extra semicolon                                                              semi
+  51:39  error    Extra semicolon                                                              semi
+  55:27  error    Extra semicolon                                                              semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/wire/decode.ts
+  11:40  error  Extra semicolon  semi
+  12:44  error  Extra semicolon  semi
+  13:37  error  Extra semicolon  semi
+  15:44  error  Extra semicolon  semi
+  18:22  error  Extra semicolon  semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/wire/encode.ts
+   1:35  error  Extra semicolon  semi
+  10:43  error  Extra semicolon  semi
+  11:48  error  Extra semicolon  semi
+  13:64  error  Extra semicolon  semi
+  16:22  error  Extra semicolon  semi
+
+/Users/heatherflux/dev/confluent-schema-registry-2/src/wire/index.ts
+  1:15  error  Replace `'./decode'` with `"./decode"`  prettier/prettier
+  1:25  error  Extra semicolon                         semi
+  2:15  error  Replace `'./encode'` with `"./encode"`  prettier/prettier
+  2:25  error  Extra semicolon                         semi
+
+✖ 680 problems (634 errors, 46 warnings)
+  590 errors and 0 warnings potentially fixable with the `--fix` option.
+
