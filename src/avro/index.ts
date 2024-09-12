@@ -20,6 +20,7 @@ export class AvroHelper {
    * Encodes a message using the provided Avro schema.
    * @param subject - The subject of the schema.
    * @param payload - The message payload to encode.
+   * @returns The encoded message.
    */
   public async encodeMessage(subject: string, payload: object): Promise<Buffer> {
     const schema = await this.schemaRegistryClient.getSchemaByVersion(subject)
@@ -32,7 +33,10 @@ export class AvroHelper {
   /**
    * Decodes a message using the provided Avro schema.
    * @param buffer - The message buffer to decode.
+   * @returns The decoded message.
    */
+  // The package is also any type
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public async decodeMessage(buffer: Buffer): Promise<any> {
     const { registryId, payload } = decode(buffer)
     const schema = await this.schemaRegistryClient.getSchemaById(registryId)

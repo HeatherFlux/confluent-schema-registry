@@ -18,3 +18,4 @@ __exportStar(require("./avro"), exports);
 __exportStar(require("./client"), exports);
 __exportStar(require("./wire"), exports);
 __exportStar(require("./protobuf"), exports);
+//# sourceMappingURL=index.js.map

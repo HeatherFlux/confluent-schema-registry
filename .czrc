@@ -1,0 +1,6 @@
+{
+    "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira",
+    "jiraPrepend": "[",
+    "jiraAppend": "]",
+    "exclamationMark": true
+}

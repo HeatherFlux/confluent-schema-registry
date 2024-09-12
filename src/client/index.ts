@@ -56,18 +56,18 @@ export class SchemaRegistryClient {
 
         // Log the response and read the body to get more details
         const errorBody = await response.text() // Read the response body
-        console.log(`Error Response (Attempt ${attempt + 1}):`, {
-          status: response.status,
-          statusText: response.statusText,
-          headers: response.headers,
-          body: errorBody, // Log the body content for more details
-        })
+        // console.log(`Error Response (Attempt ${attempt + 1}):`, {
+        //   status: response.status,
+        //   statusText: response.statusText,
+        //   headers: response.headers,
+        //   body: errorBody, // Log the body content for more details
+        // })
 
         // Throw an error with the response status and body details
         throw new Error(`HTTP error: ${response.status} ${response.statusText}. Body: ${errorBody}`)
-      } catch (error: any) {
+      } catch (error: unknown) {
         if (attempt === this.retry.retries - 1) {
-          throw new Error(`Failed to fetch ${url} after ${this.retry.retries} attempts: ${error.message}`)
+          throw new Error(`Failed to fetch ${url} after ${this.retry.retries} attempts: ${(error as Error).message}`)
         }
       }
       attempt++
@@ -95,6 +95,7 @@ export class SchemaRegistryClient {
    * Register a new schema
    * @param subject - the subject
    * @param schema - the schema
+   * @returns the register schema response
    */
   public async registerSchema(subject: string, schema: object): Promise<RegisterSchemaResponse> {
     const url = `${this.host}/subjects/${subject}/versions`
@@ -119,6 +120,7 @@ export class SchemaRegistryClient {
   /**
    * Get a schema by ID
    * @param id - the schema ID
+   * @returns the schema response
    */
   public async getSchemaById(id: number): Promise<GetSchemaByIdResponse> {
     const url = `${this.host}/schemas/ids/${id}`
@@ -141,6 +143,7 @@ export class SchemaRegistryClient {
    * Get a schema by subject and version
    * @param subject - the subject
    * @param version - the version
+   * @returns the schema response
    */
   public async getSchemaByVersion(subject: string, version: string = 'latest'): Promise<GetSchemaByIdResponse> {
     const url = `${this.host}/subjects/${subject}/versions/${version}`
@@ -155,6 +158,7 @@ export class SchemaRegistryClient {
   /**
    * Get all versions of a schema
    * @param subject - the subject
+   * @returns the schema response
    */
   public async getAllVersions(subject: string): Promise<GetAllVersionsResponse[]> {
     const url = `${this.host}/subjects/${subject}/versions`
@@ -170,6 +174,7 @@ export class SchemaRegistryClient {
 
   /**
    * Get all subjects
+   * @returns the subjects response
    */
   public async getAllSubjects(): Promise<GetAllSubjectsResponse> {
     const url = `${this.host}/subjects`
@@ -221,6 +226,7 @@ export class SchemaRegistryClient {
 
   /**
    * Get compatibility
+   * @returns the compatibility response
    */
   public async getGlobalCompatibility(): Promise<GlobalCompatibilityResponse> {
     const url = `${this.host}/config`
@@ -269,7 +275,7 @@ export class SchemaRegistryClient {
 
   /**
    * Set mode
-   * @param mode
+   * @param mode - the mode
    */
   public async setMode(mode: string): Promise<void> {
     const url = `${this.host}/mode`

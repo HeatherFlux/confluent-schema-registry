@@ -18,7 +18,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   plugins: ['@typescript-eslint', 'filenames', 'jsdoc', 'prettier'],
-  ignorePatterns: ['dist', 'node_modules', '**/*.d.ts'],
+  ignorePatterns: ['dist', 'node_modules', '**/*.d.ts', '**/*.int.ts'],
   rules: {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single', { avoidEscape: true }],

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1726160014853" clover="3.2.0">
-  <project timestamp="1726160014853" name="All files">
+<coverage generated="1726160351025" clover="3.2.0">
+  <project timestamp="1726160351025" name="All files">
     <metrics statements="128" coveredstatements="113" conditionals="12" coveredconditionals="6" methods="24" coveredmethods="23" elements="164" coveredelements="142" complexity="0" loc="128" ncloc="128" packages="4" files="6" classes="6"/>
     <package name="avro">
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>

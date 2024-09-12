@@ -1,6 +1,6 @@
 import { Message, Root } from 'protobufjs'
 import { decode, encode } from '../wire'
-import { SchemaRegistryClient } from '@client/index'
+import { SchemaRegistryClient } from '../client'
 
 /**
  * Helper class for working with Protobuf and Schema Registry.
@@ -42,7 +42,7 @@ export class ProtoHelper {
    * @param {Buffer} buffer - The buffer containing the encoded message.
    * @returns {Promise<any>} - A promise that resolves to the decoded message.
    */
-  public async decodeMessage(buffer: Buffer): Promise<Message<{}>> {
+  public async decodeMessage(buffer: Buffer): Promise<Message<object>> {
     const { registryId, payload } = decode(buffer) // Wire decode
     const res = await this.schemaRegistryClient.getSchemaById(registryId)
     const root = Root.fromJSON(JSON.parse(res.schema)) // Convert the schema to a Protobuf root

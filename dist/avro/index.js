@@ -26,16 +26,37 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AvroHelper = void 0;
 const avro = __importStar(require("avsc"));
 const wire_1 = require("../wire");
+/**
+ * A helper class for encoding and decoding Avro messages.
+ */
 class AvroHelper {
+    schemaRegistryClient;
+    /**
+     * Creates a new AvroHelper instance.
+     * @param schemaRegistryClient - The SchemaRegistryClient instance to use.
+     */
     constructor(schemaRegistryClient) {
         this.schemaRegistryClient = schemaRegistryClient;
     }
+    /**
+     * Encodes a message using the provided Avro schema.
+     * @param subject - The subject of the schema.
+     * @param payload - The message payload to encode.
+     * @returns The encoded message.
+     */
     async encodeMessage(subject, payload) {
         const schema = await this.schemaRegistryClient.getSchemaByVersion(subject);
         const avroType = avro.Type.forSchema(schema.schema);
         const serializedPayload = avroType.toBuffer(payload);
         return (0, wire_1.encode)(schema.id, serializedPayload);
     }
+    /**
+     * Decodes a message using the provided Avro schema.
+     * @param buffer - The message buffer to decode.
+     * @returns The decoded message.
+     */
+    // The package is also any type
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     async decodeMessage(buffer) {
         const { registryId, payload } = (0, wire_1.decode)(buffer);
         const schema = await this.schemaRegistryClient.getSchemaById(registryId);
@@ -44,4 +65,4 @@ class AvroHelper {
     }
 }
 exports.AvroHelper = AvroHelper;
-exports.default = AvroHelper;
+//# sourceMappingURL=index.js.map
